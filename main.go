@@ -18,6 +18,8 @@ func main() {
 	fmt.Printf("There are %v tickets in total, and %v remaining to purchase.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend")
 
+	// execute the code in a For-Loop as long as the condition is true
+	// for remainingTickets > 0 && len(bookings) < 50 {
 	for {
 		var firstName string
 		var lastName string
