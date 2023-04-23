@@ -14,10 +14,12 @@ func main() {
 	fmt.Printf("There are %v tickets in total, and %v remaining to purchase.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend")
 
+	var bookings [50]string
+
 	var firstName string
 	var lastName string
 	var email string
-	var userTickets int
+	var userTickets uint
 	// ask user for their name and tickets
 	fmt.Println("Enter your first name")
 	fmt.Scan(&firstName) //& pointer used to get the address of the variable
@@ -31,6 +33,9 @@ func main() {
 	fmt.Println("Enter number of tickets you want to purchase")
 	fmt.Scan(&userTickets)
 
-	fmt.Printf("Thank you %v %v for booking %v tickets! You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
+	remainingTickets = remainingTickets - userTickets
+	bookings[0] = firstName + " " + lastName
 
+	fmt.Printf("Thank you %v %v for booking %v tickets! You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
+	fmt.Printf("%v tickets are available for %v\n", remainingTickets, conferenceName)
 }
