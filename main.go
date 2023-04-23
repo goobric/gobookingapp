@@ -1,11 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	conferenceName := "Go Conference"
 	const conferenceTickets = 50
 	var remainingTickets uint = 50
+	bookings := []string{}
 
 	fmt.Printf("conferentTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceName)
 
@@ -14,28 +18,36 @@ func main() {
 	fmt.Printf("There are %v tickets in total, and %v remaining to purchase.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend")
 
-	var bookings [50]string
+	for {
+		var firstName string
+		var lastName string
+		var email string
+		var userTickets uint
+		// ask user for their name and tickets
+		fmt.Println("Enter your first name: ")
+		fmt.Scan(&firstName) //& pointer used to get the address of the variable
 
-	var firstName string
-	var lastName string
-	var email string
-	var userTickets uint
-	// ask user for their name and tickets
-	fmt.Println("Enter your first name")
-	fmt.Scan(&firstName) //& pointer used to get the address of the variable
+		fmt.Println("Enter your last name: ")
+		fmt.Scan(&lastName)
 
-	fmt.Println("Enter your last name")
-	fmt.Scan(&lastName)
+		fmt.Println("Enter your email: ")
+		fmt.Scan(&email)
 
-	fmt.Println("Enter your email")
-	fmt.Scan(&email)
+		fmt.Println("Enter number of tickets you want to purchase: ")
+		fmt.Scan(&userTickets)
 
-	fmt.Println("Enter number of tickets you want to purchase")
-	fmt.Scan(&userTickets)
+		remainingTickets = remainingTickets - userTickets
+		bookings = append(bookings, firstName+" "+lastName)
+		fmt.Printf("Thank you %v %v for booking %v tickets! You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
+		fmt.Printf("%v tickets are available for %v\n", remainingTickets, conferenceName)
 
-	remainingTickets = remainingTickets - userTickets
-	bookings[0] = firstName + " " + lastName
+		firstNames := []string{}
+		for index, booking := range bookings {
+			var names = strings.Fields(booking)
+			firstNames = append(firstNames, names[0])
+		}
 
-	fmt.Printf("Thank you %v %v for booking %v tickets! You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
-	fmt.Printf("%v tickets are available for %v\n", remainingTickets, conferenceName)
+		fmt.Printf("Names of people who booked are: %v\n", firstNames)
+	}
+
 }
