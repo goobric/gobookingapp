@@ -44,8 +44,8 @@ func main() {
 		isValidEmail := strings.Contains(email, "@")
 		isValidTicketNum := userTickets > 0 && userTickets <= remainingTickets
 
-		isValidCity := city == "Singapore" || city == "London"
-		isInvalidCity := city != "Singapore" && city != "London"
+		//isValidCity := city == "Singapore" || city == "London"
+		//isInvalidCity := city != "Singapore" && city != "London"
 
 		if isValidName && isValidEmail && isValidTicketNum {
 			remainingTickets = remainingTickets - userTickets
@@ -72,7 +72,17 @@ func main() {
 			}
 
 		} else {
-			fmt.Printf("We only have %v tickets left to purchase, you can't buy %v tickets\n", remainingTickets, userTickets)
+			//fmt.Printf("We only have %v tickets left to purchase, you can't buy %v tickets\n", remainingTickets, userTickets)
+			if !isValidName {
+				fmt.Println("first name or last name doesn't have enough characters")
+			}
+			if !isValidEmail {
+				fmt.Println("email address doesn't conform to the email format")
+			}
+			if !isValidTicketNum {
+				fmt.Println("number of tickets requested is invalid")
+			}
+			//fmt.Printf("Your input data is invalid, please try again\n")
 			// end program
 		}
 	}
