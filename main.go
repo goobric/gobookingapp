@@ -86,4 +86,23 @@ func main() {
 			// end program
 		}
 	}
+	city := "Singapore"
+
+	switch city {
+	case "Singapore":
+		// execute code for booking Singapore conference
+	case "New York":
+		// execute code for booking NYC conference
+	case "Berlin":
+		// execute code for booking Berlin conference
+	case "Bangkok":
+		// execute code for booking Bangkok conference
+	case "Hong Kong":
+		// execute code for booking Hong Kong conference
+	case "Cebu":
+		// execute code for booking Cebu conference
+	default:
+		fmt.Println("Invalid city entered")
+	}
+
 }
