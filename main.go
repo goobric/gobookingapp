@@ -38,9 +38,19 @@ func main() {
 		fmt.Println("Enter number of tickets you want to purchase: ")
 		fmt.Scan(&userTickets)
 
-		if userTickets <= remainingTickets {
+		//CHECK user value input
+		// var isValidName bool = len(firstName) >= 2 && len(lastName) >= 2
+		isValidName := len(firstName) >= 2 && len(lastName) >= 2
+		isValidEmail := strings.Contains(email, "@")
+		isValidTicketNum := userTickets > 0 && userTickets <= remainingTickets
+
+		isValidCity := city == "Singapore" || city == "London"
+		isInvalidCity := city != "Singapore" && city != "London"
+
+		if isValidName && isValidEmail && isValidTicketNum {
 			remainingTickets = remainingTickets - userTickets
 			bookings = append(bookings, firstName+" "+lastName)
+
 			fmt.Printf("Thank you %v %v for booking %v tickets! You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 			fmt.Printf("%v tickets are available for %v\n", remainingTickets, conferenceName)
 
