@@ -34,3 +34,16 @@
 *	the exclamation mark ! is called Logical **NOT** operator
 *	! reverses the boolean value
 *	if a condition is true, the ! now makes the condition false
+
+### Switch Statement
+*	Allows a variable to be tested for equality against a list of values
+*	'default' statement handles the case, if no match is found
+
+### Functions
+*	**Encapsulate code** into own container (=func). Which *logically belong together*
+*	Like variable name, the function needs to have a **descriptive name**
+*	**Call the func by its name** whenever the block of code needs to be executed
+
+### Functions: more Use cases
+*	Group logic that belongs together
+*	Reuse logic and so reducing duplication of code
