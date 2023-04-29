@@ -9,9 +9,9 @@
 - Slices are more flexible and powerful: variable-length or get a sub-array of its own
 - Slices are also index-based and have a size, but is Resized when needed
 
-## LOOPS
+### LOOPS
 *	In general, **languages provide various control structures** to control the application flow
-*	A loo statement allows us to **execute code multiple times** in a loop.
+*	A loop statement allows us to **execute code multiple times** in a loop.
 *	there is only **one** loop in Golang, it doesn't have: 'while-loop' 'do-while-loop' or 'for-each-loop'
 
 ### Infinite Loop

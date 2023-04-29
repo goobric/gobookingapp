@@ -1,8 +1,8 @@
 package main
 
 import (
+	"bookingApp/common"
 	"fmt"
-	"myGoBooking/common"
 	"sync"
 	"time"
 )
