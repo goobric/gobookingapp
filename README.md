@@ -99,3 +99,28 @@
 
 ### 'time' functionality for time
 *	The **sleep** function stops or blocks the current thread (goroutine) execution for the defined duration.
+
+
+### Packages in Golang
+*	Go programs are organized into *packages*
+*	A *package* is a **collection** of Go files
+*   *Multiple Packages in the application*
+*   organize the app
+*   logically goup the code
+*   A *Function* needs to be **explicitly** exported
+*   Make the fuction available for use with all packages in the application
+*   The name of the *function* needs to be **Capitalized**
+*   Variables can also be exported, they also need to be **Capitalized**
+
+### Scope: Package level
+*	Variables and Functions defined outside of any function, can be accessed in all other files **within the same package**
+
+### Package Level Variables
+*	Defined at the top **outside** all functions
+*	They can be **accessed** inside any of the functions
+*   All in all files, which are in the **same** package level
+
+### Local Variables
+*	Defined **inside** a function or a block of code
+*	They can be **accessed** inside that function or block of code
+
