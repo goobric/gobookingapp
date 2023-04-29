@@ -58,3 +58,44 @@
 *   A Go funct can return **multiple** values
 *	Multiple return values **must** be listed in parentheses() with their *Data Type*
 
+### Map Data Type
+*	Has two components: key and value
+*	Data values can be retrieved by its **Key** and the respective **Value**
+*   All **keys** have the *same* data type
+*   All **values** have the *same* data type
+*   Give **keys** a descriptive name.
+
+### Struct
+*	Struct stands for 'Structure'
+*	can hold mixed data types, for key/value pairs
+
+### Concurrency
+*   the code gets executed line-by-line in ascending order
+*   is used to make the application more efficient
+*   *concurrency* in Go is **cheap & easy**
+*   in the code example: bookTicketInfo variable will execute in its own thread; and *NOT* interupt the main function process.
+*   use **go** keyword infront of variable, this abstracts the information into its own thread.
+*   **go** starts a new goroutine
+*   A *goroutine* is a lightweight thread managed by the Go runtime.
+*   *Syncronizing* the Goroutines
+*   the **Main** application will ignore the seperate Goroutine thread, unless explicitly stated otherwise
+*   use **WaitGroup** to inform the main function not to exit until the seperate threads have performed their tasks.
+*   package *sync* provides basic synchronization functionality
+*   **Add** sets the number of goroutines to wait for (increases the counter by the provided number)
+*   **Wait** blocks until the WaitGroup counter is 0
+*   **Done** decrements the WaitGroup counter by 1. So this is called by the goroutine to indicate that this function has finished its processes.
+*   *Go* uses what is called a **Green thread**
+*   this is an **Abstraction** of an acutal thread
+    *   this abstraction is managed by the Go runtime, which is only interacting with the **high level** goroutines
+    *   it is cheaper & lightweight
+    *   therefore hundreds or thousands or millions of goroutines can be *run* without affecting the *performance* of the application.
+    *   Go uses **Channels** which is a built-in functionality for goroutines to talk to each other
+*   Other applications use Operating System Threads
+    *   managed by the kernel
+    *   hardware dependent
+    *   *cost* of threads are higher
+    *   Longer start up time
+    *   no easy communication between threads
+
+### 'time' functionality for time
+*	The **sleep** function stops or blocks the current thread (goroutine) execution for the defined duration.
