@@ -47,3 +47,14 @@
 ### Functions: more Use cases
 *	Group logic that belongs together
 *	Reuse logic and so reducing duplication of code
+
+### Parameters
+*	Information can be *passed* into functions as parameters
+*	Parameters are also called *arguments*
+
+### Return Values
+*	A function can **return** data as a result
+*	So a function can take an input and return an output
+*   A Go funct can return **multiple** values
+*	Multiple return values **must** be listed in parentheses() with their *Data Type*
+
