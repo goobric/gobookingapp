@@ -124,3 +124,27 @@
 *	Defined **inside** a function or a block of code
 *	They can be **accessed** inside that function or block of code
 
+### 3 Levels of Scope
+*	**Local**
+*	Declaration only within the functions
+*	Declaration only within a block of code
+*   **Package**
+*	Declaration outside of all functions
+*	**Global**
+*	Declaration outside of all functions && with Uppercase first character
+*	Variable Scope is the region of a program, where a defined variable can be accessed 
+
+### READABLE Code
+*	Greet the user
+*	Get user input
+*	Validate user input
+*	If validation is true
+*   Get first names of users
+*	Print first names of users
+*   If no tickets remaining, exit the program*
+*   Encapsulated code into Functions
+*   Divided code into multiple files
+
+### Executing the Program
+*	at the 'go run' command the names of all the files **MUST** be listed
+*	ex: go run main.go common.go
