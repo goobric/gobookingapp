@@ -16,8 +16,21 @@
 
 ### Infinite Loop
 
-
 ### For Loop "strings.Fields()"
 *	Splits the string with white space as seperator
 *	And returns a slice with the split elements
 *	"Nicole Smith" string	["Nicole","Smith"]
+
+### Blank Identifier
+*	underscore _ is used to ignore a variable you don't want to use
+*	In Go you need to make unused variables explicit
+
+### If Conditional True or False
+*	the default condition is set to 'true'
+*	there is only one If and one Else statement
+*	there can be multiple else-if statements.
+
+### Logical Operator !
+*	the exclamation mark ! is called Logical **NOT** operator
+*	! reverses the boolean value
+*	if a condition is true, the ! now makes the condition false
